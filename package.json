@@ -1,0 +1,9 @@
+{
+  "name": "@components/webpacker-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "@rails/webpacker": "*"
+  }
+}
