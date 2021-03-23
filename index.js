@@ -14,7 +14,7 @@ Object.assign(clonedRule.use[0].options, babelConfig({
 
 const pathsCache = [];
 
-clonedRule.include = function checkForEntdecPackage(filePath) {
+function checkForEntdecPackage(filePath) {
   filePath = fs.realpathSync(filePath);
 
   if (filePathInCache()) {
@@ -28,8 +28,9 @@ clonedRule.include = function checkForEntdecPackage(filePath) {
   if (done) {
     return false;
   }
-
-  const entDecPackage = (value.description || '').toLowerCase().indexOf('entdec:') === 0;
+  const description = typeof value.description === 'string' ? value.description.toLowerCase() : '';
+  const repo = typeof value.repository === 'string' ? value.repository.toLowerCase() : '';
+  const entDecPackage = description.indexOf('entdec') > -1 || repo.indexOf('git@code.entropydecelerator.com') > -1;
 
   if (entDecPackage) {
     console.log(`Found entdec package ${value.name}`);
@@ -39,7 +40,9 @@ clonedRule.include = function checkForEntdecPackage(filePath) {
   function filePathInCache() {
     return pathsCache.find((path) => filePath.indexOf(path) > -1);
   }
-};
+}
+
+clonedRule.include = checkForEntdecPackage;
 
 function configureWebpackerEnvironment(environment) {
   environment.loaders.append('entdecBabel', clonedRule);
@@ -51,8 +54,6 @@ function configureWebpackerEnvironment(environment) {
         loader: 'resolve-url-loader'
       })
     });
-  
-  debugger;
 
   environment.config.merge({
     resolve: {
@@ -62,6 +63,7 @@ function configureWebpackerEnvironment(environment) {
         react: "preact/compat",
         "react-dom/test-utils": "preact/test-utils",
         "react-dom": "preact/compat",
+        ...require('./aliases')
       }
     }
   });
