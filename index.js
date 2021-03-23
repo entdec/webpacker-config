@@ -4,7 +4,6 @@ const findPackageJson = require('find-package-json');
 const { babel } = require('@rails/webpacker/package/rules');
 const { nodeEnv } = require('@rails/webpacker/package/env');
 const babelConfig = require('./babel.config');
-
 const clonedRule = { ...babel };
 delete clonedRule.exclude;
 
@@ -64,7 +63,10 @@ function configureWebpackerEnvironment(environment) {
         "react-dom/test-utils": "preact/test-utils",
         "react-dom": "preact/compat",
         ...require('./aliases')
-      }
+      },
+      modules: [
+        path.join(process.cwd(), 'node_modules')
+      ]
     }
   });
 };

@@ -1,14 +1,14 @@
 {
   "name": "@components/webpacker-config",
   "description": "EntDec: Customise webpacker configuration to properly process entdec components",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
-    "@rails/webpacker": "*"
+    "@rails/webpacker": "~> 5.2"
   },
   "devDependencies": {
-    "@rails/webpacker": "https://github.com/AMar4enko/webpacker"
+    "@rails/webpacker": "~> 5.2"
   },
   "dependencies": {
     "@babel/core": "^7.0",
