@@ -1,7 +1,7 @@
 {
   "name": "@components/webpacker-config",
   "description": "EntDec: Customise webpacker configuration to properly process entdec components",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
