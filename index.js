@@ -33,6 +33,7 @@ function checkForEntdecPackage(filePath) {
 
   const description = typeof value.description === "string" ? value.description.toLowerCase() : ""
   const repo = typeof value.repository === "string" ? value.repository.toLowerCase() : ""
+  console.log(repo)
   const entDecPackage = description.indexOf("entdec") > -1 || repo.indexOf("git@github.com/entdec") > -1
 
   if (entDecPackage) {
@@ -48,6 +49,7 @@ function checkForEntdecPackage(filePath) {
 clonedRule.include = checkForEntdecPackage
 
 function configureWebpackerEnvironment(environment) {
+  console.log("LOLOLOLOLOLOLOL")
   environment.loaders.append("entdecBabel", clonedRule)
   ;["sass", "moduleSass"]
     .map((name) => environment.loaders.get(name))
