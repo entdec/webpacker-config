@@ -32,12 +32,12 @@ function checkForEntdecPackage(filePath) {
   }
 
   const description = typeof value.description === "string" ? value.description.toLowerCase() : ""
+  const name = typeof value.name === "string" ? value.name.toLowerCase() : ""
   const repo = typeof value.repository === "string" ? value.repository.toLowerCase() : ""
-  console.log(repo)
-  const entDecPackage = description.indexOf("entdec") > -1 || repo.indexOf("git@github.com/entdec") > -1
+  const entDecPackage = description.indexOf("entdec") > -1 || repo.indexOf("git@github.com:entdec") > -1 || name.indexOf("@entdec") == 0
 
   if (entDecPackage) {
-    console.log(`Found entdec package ${value.name}`)
+    console.log(`Found entdec package ${name}`)
     pathsCache.push(path.dirname(filename))
   }
 

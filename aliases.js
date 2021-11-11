@@ -1,10 +1,10 @@
 module.exports = {
-  "@components/caliga": "@components/caliga/frontend",
-  "@components/satis": "@components/satis/frontend",
-  "@components/papyrus": "@components/papyrus/frontend",
-  "@components/trado": "@components/trado/frontend",
-  "@components/vorto": "@components/vorto/frontend",
-  "@components/nuntius": "@components/nuntius/frontend",
-  "@components/scribo": "@components/scribo/frontend",
-  "@components/signum": "@components/signum/frontend",
+  "@entdec/caliga": "@entdec/caliga/frontend",
+  "@entdec/satis": "@entdec/satis/frontend",
+  "@entdec/papyrus": "@entdec/papyrus/frontend",
+  "@entdec/trado": "@entdec/trado/frontend",
+  "@entdec/vorto": "@entdec/vorto/frontend",
+  "@entdec/nuntius": "@entdec/nuntius/frontend",
+  "@entdec/scribo": "@entdec/scribo/frontend",
+  "@entdec/signum": "@entdec/signum/frontend",
 }
