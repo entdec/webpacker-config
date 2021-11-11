@@ -49,7 +49,6 @@ function checkForEntdecPackage(filePath) {
 clonedRule.include = checkForEntdecPackage
 
 function configureWebpackerEnvironment(environment) {
-  console.log("LOLOLOLOLOLOLOL")
   environment.loaders.append("entdecBabel", clonedRule)
   ;["sass", "moduleSass"]
     .map((name) => environment.loaders.get(name))
