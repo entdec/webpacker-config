@@ -27,6 +27,9 @@
     "sass": "1.30",
     "sass-loader": "^8.0"
   },
+  "resolutions": {
+    "**/node-gyp": "^7.0.0"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }

@@ -1,4 +1,5 @@
 module.exports = {
+  "@entdec/adiuvo": "@entdec/adiuvo/frontend",
   "@entdec/caliga": "@entdec/caliga/frontend",
   "@entdec/satis": "@entdec/satis/frontend",
   "@entdec/papyrus": "@entdec/papyrus/frontend",
