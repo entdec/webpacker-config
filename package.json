@@ -5,10 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
-    "@rails/webpacker": "~> 5.2"
+    "@rails/webpacker": "~> 5.4"
   },
   "devDependencies": {
-    "@rails/webpacker": "~> 5.2"
+    "@rails/webpacker": "~> 5.4"
   },
   "dependencies": {
     "@babel/core": "^7.0",
