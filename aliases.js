@@ -1,4 +1,5 @@
 module.exports = {
+  "@entdec/action_table": "@entdec/action_table/frontend",
   "@entdec/adiuvo": "@entdec/adiuvo/frontend",
   "@entdec/caliga": "@entdec/caliga/frontend",
   "@entdec/satis": "@entdec/satis/frontend",
